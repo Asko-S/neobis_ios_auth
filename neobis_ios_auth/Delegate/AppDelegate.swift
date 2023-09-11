@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  neobis_ios_auth
 //
-//  Created by Askar Soronbekov on 11/9/23.
+//  Created by Askar Soronbekov 
 //
 
 import UIKit
