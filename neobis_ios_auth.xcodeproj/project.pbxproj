@@ -115,9 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				049377822AB748B700DB8086 /* Service */,
-				042AD65E2AAF10FA00B32A31 /* Models */,
-				0493778D2AB74E5E00DB8086 /* Views */,
-				042AD6612AAF450300B32A31 /* ViewModels */,
+				042AD65E2AAF10FA00B32A31 /* Model */,
+				0493778D2AB74E5E00DB8086 /* View */,
+				042AD6612AAF450300B32A31 /* ViewModel */,
 				048CEE982AB1D8F50007D54E /* Fonts */,
 				042AD6A62AAF61FC00B32A31 /* Delegate */,
 				042AD64D2AAF10C900B32A31 /* Main.storyboard */,
@@ -128,20 +128,20 @@
 			path = neobis_ios_auth;
 			sourceTree = "<group>";
 		};
-		042AD65E2AAF10FA00B32A31 /* Models */ = {
+		042AD65E2AAF10FA00B32A31 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				042AD65F2AAF11EC00B32A31 /* UserModel.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		042AD6612AAF450300B32A31 /* ViewModels */ = {
+		042AD6612AAF450300B32A31 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				042AD6622AAF453300B32A31 /* UserViewModel.swift */,
 			);
-			path = ViewModels;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		042AD6642AAF45BF00B32A31 /* LoginPage */ = {
@@ -249,7 +249,7 @@
 			path = PopUp;
 			sourceTree = "<group>";
 		};
-		0493778D2AB74E5E00DB8086 /* Views */ = {
+		0493778D2AB74E5E00DB8086 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				0493778E2AB74EB700DB8086 /* CreatePassword */,
@@ -262,7 +262,7 @@
 				042AD6692AAF466600B32A31 /* Custom */,
 				042AD6642AAF45BF00B32A31 /* LoginPage */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		0493778E2AB74EB700DB8086 /* CreatePassword */ = {

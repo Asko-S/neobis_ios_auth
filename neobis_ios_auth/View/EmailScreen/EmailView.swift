@@ -1,9 +1,6 @@
-//
 //  EmailView.swift
 //  neobis_ios_auth
-//
-//  Created by Askar Soronbekov 
-//
+//  Created by Askar Soronbekov
 
 import Foundation
 import UIKit
