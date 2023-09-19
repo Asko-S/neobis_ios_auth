@@ -1,5 +1,5 @@
 //
-//  ResetView.swift
+//  CreatePasswordView.swift
 //  neobis_ios_auth
 //  Created by Askar Soronbekov
 
@@ -7,7 +7,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-class ResetView : UIView, UITextFieldDelegate {
+class CreatePasswordView : UIView, UITextFieldDelegate {
     
     let newPassword : CustomTextField = {
         let field = CustomTextField()
@@ -49,24 +49,6 @@ class ResetView : UIView, UITextFieldDelegate {
         button.setImage(UIImage(named: "eye-disable"), for: .selected)
         button.frame = CGRect(x: CGFloat(field.frame.size.width - 25), y: CGFloat(5), width: CGFloat(25), height: CGFloat(25))
         button.addTarget(self, action: #selector(toggleRepeatPasswordVisibility), for: .touchUpInside)
-        field.rightView = button
-        field.rightViewMode = .always
-        
-        return field
-    }()
-    
-    let authCode: CustomTextField = {
-        let field = CustomTextField()
-        field.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 248/255, alpha: 1.0)
-        field.placeholder = "Введите секретный код"
-        let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
-        field.leftView = leftView
-        field.leftViewMode = .always
-        field.layer.cornerRadius = 8
-        field.returnKeyType = .search
-        
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: CGFloat(field.frame.size.width - 25), y: CGFloat(5), width: CGFloat(25), height: CGFloat(25))
         field.rightView = button
         field.rightViewMode = .always
         
@@ -166,7 +148,6 @@ class ResetView : UIView, UITextFieldDelegate {
         addSubview(secondLabel)
         addSubview(thirdLabel)
         addSubview(fourthLabel)
-        addSubview(authCode)
     }
     
     func setupConstraints() {
@@ -185,37 +166,30 @@ class ResetView : UIView, UITextFieldDelegate {
             make.width.equalTo(UIScreen.main.bounds.width * 335 / 375)
         }
         
-        authCode.snp.makeConstraints{ make in
-            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 296 / 812)
-            make.centerX.equalToSuperview()
-            make.height.equalTo(UIScreen.main.bounds.height * 60 / 812)
-            make.width.equalTo(UIScreen.main.bounds.width * 335 / 375)
-        }
-        
         enterButton.snp.makeConstraints{ make in
-            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 524 / 812)
+            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 440 / 812)
             make.centerX.equalToSuperview()
             make.width.equalTo(UIScreen.main.bounds.width * 335 / 375)
             make.height.equalTo(UIScreen.main.bounds.height * 65 / 812)
         }
         
         firstLabel.snp.makeConstraints{ make in
-            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 112 / 812)
+            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 28 / 812)
             make.leading.equalTo(repeatPassword.snp.leading)
         }
         
         secondLabel.snp.makeConstraints{ make in
-            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 139 / 812)
+            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 55 / 812)
             make.leading.equalTo(repeatPassword.snp.leading)
         }
         
         thirdLabel.snp.makeConstraints{ make in
-            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 166 / 812)
+            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 82 / 812)
             make.leading.equalTo(repeatPassword.snp.leading)
         }
         
         fourthLabel.snp.makeConstraints{ make in
-            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 193 / 812)
+            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 109 / 812)
             make.leading.equalTo(repeatPassword.snp.leading)
         }
     }
@@ -265,3 +239,5 @@ class ResetView : UIView, UITextFieldDelegate {
     }
     
 }
+
+

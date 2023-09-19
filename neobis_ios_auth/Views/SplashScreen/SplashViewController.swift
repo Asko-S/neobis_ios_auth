@@ -8,7 +8,7 @@ import SnapKit
 class SplashViewController : UIViewController {
     
     let mainView = SplashScreenView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -25,14 +25,17 @@ class SplashViewController : UIViewController {
     }
     
     @objc func beginButtonPressed() {
-        let vc = RegistrationViewController()
+        let userViewModel = UserViewModel()
+        let vc = RegistrationViewController(userViewModel: userViewModel)
         
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func authorizeButtonPressed() {
-        let vc = LoginViewController()
-        
+        let userViewModel = UserViewModel()
+        let vc = LoginViewController(userViewModel: userViewModel)
+            
         navigationController?.pushViewController(vc, animated: true)
     }
+
 }

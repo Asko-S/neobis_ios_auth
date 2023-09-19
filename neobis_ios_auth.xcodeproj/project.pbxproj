@@ -26,6 +26,22 @@
 		042AD6802AAF4CA100B32A31 /* ResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AD67F2AAF4CA100B32A31 /* ResetView.swift */; };
 		042AD6A42AAF548D00B32A31 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AD6A22AAF548D00B32A31 /* InfoView.swift */; };
 		042AD6A52AAF548D00B32A31 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AD6A32AAF548D00B32A31 /* InfoViewController.swift */; };
+		048CEEA32AB1D8F50007D54E /* gothampro_mediumitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEE992AB1D8F50007D54E /* gothampro_mediumitalic.ttf */; };
+		048CEEA42AB1D8F50007D54E /* gothampro_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEE9A2AB1D8F50007D54E /* gothampro_medium.ttf */; };
+		048CEEA52AB1D8F50007D54E /* gothampro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEE9B2AB1D8F50007D54E /* gothampro.ttf */; };
+		048CEEA62AB1D8F50007D54E /* gothampro_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEE9C2AB1D8F50007D54E /* gothampro_bold.ttf */; };
+		048CEEA72AB1D8F50007D54E /* gothampro_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEE9D2AB1D8F50007D54E /* gothampro_black.ttf */; };
+		048CEEA82AB1D8F50007D54E /* gothampro_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEE9E2AB1D8F50007D54E /* gothampro_italic.ttf */; };
+		048CEEA92AB1D8F50007D54E /* gothampro_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEE9F2AB1D8F50007D54E /* gothampro_light.ttf */; };
+		048CEEAA2AB1D8F50007D54E /* gothampro_lightitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEEA02AB1D8F50007D54E /* gothampro_lightitalic.ttf */; };
+		048CEEAB2AB1D8F50007D54E /* gothampro_blackitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEEA12AB1D8F50007D54E /* gothampro_blackitalic.ttf */; };
+		048CEEAC2AB1D8F50007D54E /* gothampro_bolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEEA22AB1D8F50007D54E /* gothampro_bolditalic.ttf */; };
+		049377842AB748DC00DB8086 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049377832AB748DC00DB8086 /* UserService.swift */; };
+		049377872AB74A1400DB8086 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049377862AB74A1400DB8086 /* EmailView.swift */; };
+		049377892AB74A2200DB8086 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049377882AB74A2200DB8086 /* EmailViewController.swift */; };
+		0493778C2AB74AA200DB8086 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493778B2AB74AA200DB8086 /* PopUp.swift */; };
+		049377902AB74EE200DB8086 /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493778F2AB74EE200DB8086 /* CreatePasswordView.swift */; };
+		049377922AB74F0600DB8086 /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049377912AB74F0600DB8086 /* CreatePasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,18 +63,24 @@
 		042AD6792AAF4AD100B32A31 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		042AD67C2AAF4C7200B32A31 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 		042AD67F2AAF4CA100B32A31 /* ResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetView.swift; sourceTree = "<group>"; };
-		042AD6972AAF52CC00B32A31 /* gothampro_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_medium.ttf; sourceTree = "<group>"; };
-		042AD6982AAF52CC00B32A31 /* gothampro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro.ttf; sourceTree = "<group>"; };
-		042AD6992AAF52CC00B32A31 /* gothampro_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_light.ttf; sourceTree = "<group>"; };
-		042AD69A2AAF52CC00B32A31 /* gothampro_bolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_bolditalic.ttf; sourceTree = "<group>"; };
-		042AD69B2AAF52CC00B32A31 /* gothampro_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_italic.ttf; sourceTree = "<group>"; };
-		042AD69C2AAF52CC00B32A31 /* gothampro_mediumitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_mediumitalic.ttf; sourceTree = "<group>"; };
-		042AD69D2AAF52CC00B32A31 /* gothampro_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_black.ttf; sourceTree = "<group>"; };
-		042AD69E2AAF52CC00B32A31 /* gothampro_blackitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_blackitalic.ttf; sourceTree = "<group>"; };
-		042AD69F2AAF52CC00B32A31 /* gothampro_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_bold.ttf; sourceTree = "<group>"; };
-		042AD6A02AAF52CC00B32A31 /* gothampro_lightitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_lightitalic.ttf; sourceTree = "<group>"; };
 		042AD6A22AAF548D00B32A31 /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		042AD6A32AAF548D00B32A31 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		048CEE992AB1D8F50007D54E /* gothampro_mediumitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_mediumitalic.ttf; sourceTree = "<group>"; };
+		048CEE9A2AB1D8F50007D54E /* gothampro_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_medium.ttf; sourceTree = "<group>"; };
+		048CEE9B2AB1D8F50007D54E /* gothampro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro.ttf; sourceTree = "<group>"; };
+		048CEE9C2AB1D8F50007D54E /* gothampro_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_bold.ttf; sourceTree = "<group>"; };
+		048CEE9D2AB1D8F50007D54E /* gothampro_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_black.ttf; sourceTree = "<group>"; };
+		048CEE9E2AB1D8F50007D54E /* gothampro_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_italic.ttf; sourceTree = "<group>"; };
+		048CEE9F2AB1D8F50007D54E /* gothampro_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_light.ttf; sourceTree = "<group>"; };
+		048CEEA02AB1D8F50007D54E /* gothampro_lightitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_lightitalic.ttf; sourceTree = "<group>"; };
+		048CEEA12AB1D8F50007D54E /* gothampro_blackitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_blackitalic.ttf; sourceTree = "<group>"; };
+		048CEEA22AB1D8F50007D54E /* gothampro_bolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_bolditalic.ttf; sourceTree = "<group>"; };
+		049377832AB748DC00DB8086 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		049377862AB74A1400DB8086 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		049377882AB74A2200DB8086 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		0493778B2AB74AA200DB8086 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
+		0493778F2AB74EE200DB8086 /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
+		049377912AB74F0600DB8086 /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,15 +114,11 @@
 		042AD6462AAF10C900B32A31 /* neobis_ios_auth */ = {
 			isa = PBXGroup;
 			children = (
-				042AD6A12AAF548D00B32A31 /* InfoScreen */,
-				042AD67B2AAF4C5F00B32A31 /* ResetPassword */,
-				042AD6742AAF499600B32A31 /* SplashScreen */,
-				042AD66F2AAF47F500B32A31 /* RegistrationPage */,
-				042AD6692AAF466600B32A31 /* Custom */,
-				042AD6642AAF45BF00B32A31 /* LoginPage */,
-				042AD6612AAF450300B32A31 /* ViewModels */,
+				049377822AB748B700DB8086 /* Service */,
 				042AD65E2AAF10FA00B32A31 /* Models */,
-				042AD6962AAF52CC00B32A31 /* Fonts */,
+				0493778D2AB74E5E00DB8086 /* Views */,
+				042AD6612AAF450300B32A31 /* ViewModels */,
+				048CEE982AB1D8F50007D54E /* Fonts */,
 				042AD6A62AAF61FC00B32A31 /* Delegate */,
 				042AD64D2AAF10C900B32A31 /* Main.storyboard */,
 				042AD6502AAF10C900B32A31 /* Assets.xcassets */,
@@ -170,23 +188,6 @@
 			path = ResetPassword;
 			sourceTree = "<group>";
 		};
-		042AD6962AAF52CC00B32A31 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				042AD69C2AAF52CC00B32A31 /* gothampro_mediumitalic.ttf */,
-				042AD6972AAF52CC00B32A31 /* gothampro_medium.ttf */,
-				042AD6982AAF52CC00B32A31 /* gothampro.ttf */,
-				042AD69F2AAF52CC00B32A31 /* gothampro_bold.ttf */,
-				042AD69D2AAF52CC00B32A31 /* gothampro_black.ttf */,
-				042AD69B2AAF52CC00B32A31 /* gothampro_italic.ttf */,
-				042AD6992AAF52CC00B32A31 /* gothampro_light.ttf */,
-				042AD6A02AAF52CC00B32A31 /* gothampro_lightitalic.ttf */,
-				042AD69E2AAF52CC00B32A31 /* gothampro_blackitalic.ttf */,
-				042AD69A2AAF52CC00B32A31 /* gothampro_bolditalic.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		042AD6A12AAF548D00B32A31 /* InfoScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +204,74 @@
 				042AD6492AAF10C900B32A31 /* SceneDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		048CEE982AB1D8F50007D54E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				048CEE992AB1D8F50007D54E /* gothampro_mediumitalic.ttf */,
+				048CEE9A2AB1D8F50007D54E /* gothampro_medium.ttf */,
+				048CEE9B2AB1D8F50007D54E /* gothampro.ttf */,
+				048CEE9C2AB1D8F50007D54E /* gothampro_bold.ttf */,
+				048CEE9D2AB1D8F50007D54E /* gothampro_black.ttf */,
+				048CEE9E2AB1D8F50007D54E /* gothampro_italic.ttf */,
+				048CEE9F2AB1D8F50007D54E /* gothampro_light.ttf */,
+				048CEEA02AB1D8F50007D54E /* gothampro_lightitalic.ttf */,
+				048CEEA12AB1D8F50007D54E /* gothampro_blackitalic.ttf */,
+				048CEEA22AB1D8F50007D54E /* gothampro_bolditalic.ttf */,
+			);
+			name = Fonts;
+			path = neobis_ios_auth/Fonts;
+			sourceTree = SOURCE_ROOT;
+		};
+		049377822AB748B700DB8086 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				049377832AB748DC00DB8086 /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		049377852AB749F600DB8086 /* EmailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				049377862AB74A1400DB8086 /* EmailView.swift */,
+				049377882AB74A2200DB8086 /* EmailViewController.swift */,
+			);
+			path = EmailScreen;
+			sourceTree = "<group>";
+		};
+		0493778A2AB74A9300DB8086 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				0493778B2AB74AA200DB8086 /* PopUp.swift */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		0493778D2AB74E5E00DB8086 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0493778E2AB74EB700DB8086 /* CreatePassword */,
+				0493778A2AB74A9300DB8086 /* PopUp */,
+				049377852AB749F600DB8086 /* EmailScreen */,
+				042AD6A12AAF548D00B32A31 /* InfoScreen */,
+				042AD67B2AAF4C5F00B32A31 /* ResetPassword */,
+				042AD6742AAF499600B32A31 /* SplashScreen */,
+				042AD66F2AAF47F500B32A31 /* RegistrationPage */,
+				042AD6692AAF466600B32A31 /* Custom */,
+				042AD6642AAF45BF00B32A31 /* LoginPage */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0493778E2AB74EB700DB8086 /* CreatePassword */ = {
+			isa = PBXGroup;
+			children = (
+				0493778F2AB74EE200DB8086 /* CreatePasswordView.swift */,
+				049377912AB74F0600DB8086 /* CreatePasswordViewController.swift */,
+			);
+			path = CreatePassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +339,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				042AD6542AAF10C900B32A31 /* LaunchScreen.storyboard in Resources */,
+				048CEEA62AB1D8F50007D54E /* gothampro_bold.ttf in Resources */,
+				048CEEAA2AB1D8F50007D54E /* gothampro_lightitalic.ttf in Resources */,
+				048CEEA42AB1D8F50007D54E /* gothampro_medium.ttf in Resources */,
+				048CEEA32AB1D8F50007D54E /* gothampro_mediumitalic.ttf in Resources */,
+				048CEEA82AB1D8F50007D54E /* gothampro_italic.ttf in Resources */,
+				048CEEA92AB1D8F50007D54E /* gothampro_light.ttf in Resources */,
+				048CEEAC2AB1D8F50007D54E /* gothampro_bolditalic.ttf in Resources */,
+				048CEEA72AB1D8F50007D54E /* gothampro_black.ttf in Resources */,
+				048CEEAB2AB1D8F50007D54E /* gothampro_blackitalic.ttf in Resources */,
 				042AD6512AAF10C900B32A31 /* Assets.xcassets in Resources */,
+				048CEEA52AB1D8F50007D54E /* gothampro.ttf in Resources */,
 				042AD64F2AAF10C900B32A31 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +362,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				042AD67D2AAF4C7200B32A31 /* ResetViewController.swift in Sources */,
+				049377892AB74A2200DB8086 /* EmailViewController.swift in Sources */,
+				049377872AB74A1400DB8086 /* EmailView.swift in Sources */,
+				0493778C2AB74AA200DB8086 /* PopUp.swift in Sources */,
 				042AD67A2AAF4AD100B32A31 /* LoginViewController.swift in Sources */,
 				042AD6682AAF464D00B32A31 /* CustomTextField.swift in Sources */,
 				042AD6732AAF482B00B32A31 /* RegistrationScreenView.swift in Sources */,
@@ -294,8 +376,11 @@
 				042AD6712AAF481B00B32A31 /* RegistrationViewController.swift in Sources */,
 				042AD6482AAF10C900B32A31 /* AppDelegate.swift in Sources */,
 				042AD6782AAF49DD00B32A31 /* SplashView.swift in Sources */,
+				049377842AB748DC00DB8086 /* UserService.swift in Sources */,
 				042AD6602AAF11EC00B32A31 /* UserModel.swift in Sources */,
+				049377902AB74EE200DB8086 /* CreatePasswordView.swift in Sources */,
 				042AD6632AAF453300B32A31 /* UserViewModel.swift in Sources */,
+				049377922AB74F0600DB8086 /* CreatePasswordViewController.swift in Sources */,
 				042AD64A2AAF10C900B32A31 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

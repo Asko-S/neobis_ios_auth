@@ -1,16 +1,15 @@
-//  RegistrationScreenView.swift
+//
+//  EmailView.swift
 //  neobis_ios_auth
-//  Created by Askar Soronbekov
-
-import Foundation
- import UIKit
- import SnapKit
+//
+//  Created by Askar Soronbekov 
+//
 
 import Foundation
 import UIKit
 import SnapKit
 
-class RegistrationScreenView : UIView, UITextFieldDelegate {
+class EmailView : UIView, UITextFieldDelegate {
     
     let smileImage : UIImageView = {
         let image = UIImageView()
@@ -62,7 +61,6 @@ class RegistrationScreenView : UIView, UITextFieldDelegate {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         loginField.delegate = self
     }
     
@@ -139,3 +137,4 @@ class RegistrationScreenView : UIView, UITextFieldDelegate {
     }
 
 }
+

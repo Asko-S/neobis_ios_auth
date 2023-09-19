@@ -17,13 +17,13 @@ class InfoView : UIView, UITextFieldDelegate {
         field.leftViewMode = .always
         field.layer.cornerRadius = 8
         field.returnKeyType = .search
-        
+
         let button = UIButton(type: .custom)
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -16, bottom: 0, right: 0)
         button.frame = CGRect(x: CGFloat(field.frame.size.width - 25), y: CGFloat(5), width: CGFloat(25), height: CGFloat(25))
         field.rightView = button
         field.rightViewMode = .always
-        
+
         return field
     }()
     
@@ -36,13 +36,13 @@ class InfoView : UIView, UITextFieldDelegate {
         field.leftViewMode = .always
         field.layer.cornerRadius = 8
         field.returnKeyType = .search
-        
+
         let button = UIButton(type: .custom)
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -16, bottom: 0, right: 0)
         button.frame = CGRect(x: CGFloat(field.frame.size.width - 25), y: CGFloat(5), width: CGFloat(25), height: CGFloat(25))
         field.rightView = button
         field.rightViewMode = .always
-        
+
         return field
     }()
     
@@ -55,13 +55,13 @@ class InfoView : UIView, UITextFieldDelegate {
         field.leftViewMode = .always
         field.layer.cornerRadius = 8
         field.returnKeyType = .search
-        
+
         let button = UIButton(type: .custom)
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -16, bottom: 0, right: 0)
         button.frame = CGRect(x: CGFloat(field.frame.size.width - 25), y: CGFloat(5), width: CGFloat(25), height: CGFloat(25))
         field.rightView = button
         field.rightViewMode = .always
-        
+
         return field
     }()
     
@@ -74,7 +74,7 @@ class InfoView : UIView, UITextFieldDelegate {
         field.leftViewMode = .always
         field.layer.cornerRadius = 8
         field.returnKeyType = .search
-        
+
         return field
     }()
     
@@ -168,7 +168,7 @@ class InfoView : UIView, UITextFieldDelegate {
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
         
         if textField == mailField {
-            
+   
             if updatedText.contains("@") && nameField.text!.count >= 1 {
                 enterButton.backgroundColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
                 enterButton.setTitleColor(UIColor.white, for: .normal)
