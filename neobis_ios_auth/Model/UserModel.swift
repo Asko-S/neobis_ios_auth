@@ -4,46 +4,47 @@
 
 import Foundation
 
-struct ForgotPassword: Codable {
+struct TokenObtainPair: Codable {
     let email: String
-}
-
-struct ForgotPasswordConfirm: Codable {
-    let new_password: String
-    let new_password_confirm: String
-    let activation_code: String
+    let tokens: Tokens
     
-    enum CodingKeys: String, CodingKey {
-        case new_password = "new_password"
-        case new_password_confirm = "new_password_confirm"
-        case activation_code = "activation_code"
+        struct Tokens: Codable {
+            let refresh: String
+            let access: String
     }
 }
 
-struct PasswordChangeResponse: Decodable {
-    let msg: String
+struct Login: Codable {
+    let email: String
+    let password: String
 }
 
-struct TokenObtainPair: Codable {
-    let refresh: String
-    let access: String
+struct SetNewPassword: Codable {
+    let password: String
+    let token: String
+    let uidb64: String
+}
+
+struct PasswordResetEmailSerializers: Codable {
+    let email: String
+}
+
+struct EmailRegistration: Codable {
+    let email: String
+}
+
+
+struct ProfileRegistration: Codable {
+    let first_name: String
+    let last_name: String
+    let date_of_birth: String
+    let email: String
+    let password: String
+    let password_confirm: String
 }
 
 struct TokenRefresh: Codable {
     let refresh: String
     let access: String
-}
-
-struct RegisterBegin: Codable {
-    let email: String
-}
-
-struct Register: Codable {
-    let email: String
-    let name: String
-    let last_name: String
-    let birthday: String
-    let password: String
-    let password2: String
 }
 

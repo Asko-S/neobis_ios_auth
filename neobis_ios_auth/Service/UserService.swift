@@ -5,7 +5,7 @@
 import Foundation
 
 class APIService {
-    let baseURL = "http://64.227.66.224/api/"
+    let baseURL = "http://64.227.66.224/"
 
     func post(endpoint: String, parameters: [String: Any], completion: @escaping (Result<Data, Error>) -> Void) {
         guard let url = URL(string: baseURL + endpoint) else { return }
