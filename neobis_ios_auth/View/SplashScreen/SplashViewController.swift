@@ -27,7 +27,7 @@ class SplashViewController : UIViewController {
     @objc func beginButtonPressed() {
         let userViewModel = UserViewModel()
         let vc = RegistrationViewController(userViewModel: userViewModel)
-        
+
         navigationController?.pushViewController(vc, animated: true)
     }
     

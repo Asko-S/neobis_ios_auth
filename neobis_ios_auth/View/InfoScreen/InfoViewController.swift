@@ -9,6 +9,7 @@ import SnapKit
 class InfoViewController : UIViewController {
 
     let mainView = InfoView()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +24,10 @@ class InfoViewController : UIViewController {
     @objc func enterPressed() {
         let userViewModel = UserViewModel()
         let vc = CreatePasswordViewController(userViewModel: userViewModel)
-        
-        vc.name = mainView.nameField.text ?? ""
+
+        vc.first_name = mainView.nameField.text ?? ""
         vc.last_name = mainView.secondNameField.text ?? ""
-        vc.birthday = mainView.dateField.text ?? ""
+        vc.date_of_birth = mainView.dateField.text ?? ""
         vc.email = mainView.mailField.text ?? ""
 
         navigationController?.pushViewController(vc, animated: true)
@@ -43,7 +44,7 @@ class InfoViewController : UIViewController {
         }
     }
     
-    func didConfirmRegistration(user: Register) {
+    func didConfirmRegistration(user: ProfileRegistration) {
         print("Registration success")
     }
     

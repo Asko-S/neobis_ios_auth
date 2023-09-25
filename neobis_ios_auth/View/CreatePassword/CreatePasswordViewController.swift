@@ -7,23 +7,23 @@ import UIKit
 import SnapKit
 
 class CreatePasswordViewController : UIViewController, RegisterConfirmViewModelDelegate {
-    func didConfirmRegistration(user: Register) {
+    func didConfirmRegistration(user: ProfileRegistration) {
         print()
     }
     
-    var name: String
+    var first_name: String
     var last_name: String
-    var birthday: String
+    var date_of_birth: String
     var email: String
     
     let mainView = CreatePasswordView()
     let infoView = InfoView()
     var userViewModel : UserViewModelProtocol!
     
-    init(userViewModel: UserViewModelProtocol, name: String = "", last_name: String = "", birthday: String = "",  email: String = "") {
-        self.name = name
+    init(userViewModel: UserViewModelProtocol, first_name: String = "", last_name: String = "", date_of_birth: String = "",  email: String = "") {
+        self.first_name = first_name
         self.last_name = last_name
-        self.birthday = birthday
+        self.date_of_birth = date_of_birth
         self.email = email
         super.init(nibName: nil, bundle: nil)
         self.userViewModel = userViewModel
@@ -48,12 +48,12 @@ class CreatePasswordViewController : UIViewController, RegisterConfirmViewModelD
     
     @objc func enterPressed() {
         if mainView.enterButton.currentTitleColor == .white{
-            guard let password = mainView.newPassword.text, let password2 = mainView.repeatPassword.text else {
+            guard let password = mainView.newPassword.text, let password_confirm = mainView.repeatPassword.text else {
                 // Show error message to user
                 print("Error")
                 return
             }
-            userViewModel.registerConfirmUser(email: email, name: name, last_name: last_name, birthday: birthday, password: password, password2: password2)
+            userViewModel.registerConfirmUser(first_name: first_name, last_name: last_name, date_of_birth: date_of_birth, email: email, password: password, password_confirm: password_confirm)
         }
     }
     
@@ -69,7 +69,7 @@ class CreatePasswordViewController : UIViewController, RegisterConfirmViewModelD
         }
     }
     
-    func didConfirmForgotPassword(user: ForgotPasswordConfirm) {
+    func didConfirmForgotPassword(user: SetNewPassword) {
         print("Password added")
     }
     
