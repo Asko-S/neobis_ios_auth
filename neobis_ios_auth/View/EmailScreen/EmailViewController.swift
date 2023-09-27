@@ -60,12 +60,12 @@ class EmailViewController : UIViewController, ForgotPasswordViewModelDelegate {
         }
     }
     
-    func didForgotPassword(user: ForgotPassword) {
+    func didForgotPassword(user: PasswordResetEmailSerializers) {
         print("Succesfully sent mail")
     }
     
     func didFail(with error: Error) {
-//        print("Failed to send mail")
+        print("Failed to send mail. Error: \(error.localizedDescription)")
     }
 }
 

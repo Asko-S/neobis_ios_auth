@@ -29,7 +29,7 @@ class LoginViewController : UIViewController, LoginViewModelDelegate {
         self.navigationItem.leftBarButtonItem = backButton
         
         mainView.enterButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
-        //        mainView.resetPasswordButton.addTarget(self, action: #selector(resetPasswordPressed), for: .touchUpInside)
+                mainView.resetPasswordButton.addTarget(self, action: #selector(resetPasswordPressed), for: .touchUpInside)
     }
     
     @objc func loginPressed() {
@@ -46,11 +46,11 @@ class LoginViewController : UIViewController, LoginViewModelDelegate {
         navigationController?.popViewController(animated: true)
     }
     
-//    @objc func resetPasswordPressed() {
-//        let userViewModel = UserViewModel()
-//        let vc = EmailViewController(userViewModel: userViewModel)
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
+    @objc func resetPasswordPressed() {
+        let userViewModel = UserViewModel()
+        let vc = EmailViewController(userViewModel: userViewModel)
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     func setupView(){
         view.addSubview(mainView)

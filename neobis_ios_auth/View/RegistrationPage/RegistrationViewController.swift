@@ -67,6 +67,6 @@ class RegistrationViewController : UIViewController, RegistrationViewModelDelega
 
     func didFail(with error: Error) {
         // Handle failure in registration here.
-//        print("Error in registration: \(error.localizedDescription)")
+        print("Error in registration: \(error.localizedDescription)")
     }
 }
