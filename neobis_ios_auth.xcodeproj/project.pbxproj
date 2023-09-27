@@ -14,7 +14,7 @@
 		042AD6542AAF10C900B32A31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042AD6522AAF10C900B32A31 /* LaunchScreen.storyboard */; };
 		042AD65D2AAF10EE00B32A31 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 042AD65C2AAF10EE00B32A31 /* SnapKit */; };
 		042AD6602AAF11EC00B32A31 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AD65F2AAF11EC00B32A31 /* UserModel.swift */; };
-		042AD6632AAF453300B32A31 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AD6622AAF453300B32A31 /* UserViewModel.swift */; };
+		042AD6632AAF453300B32A31 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AD6622AAF453300B32A31 /* AuthViewModel.swift */; };
 		042AD6662AAF45EA00B32A31 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AD6652AAF45EA00B32A31 /* LoginScreenView.swift */; };
 		042AD6682AAF464D00B32A31 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AD6672AAF464D00B32A31 /* CustomTextField.swift */; };
 		042AD6712AAF481B00B32A31 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AD6702AAF481B00B32A31 /* RegistrationViewController.swift */; };
@@ -26,6 +26,8 @@
 		042AD6802AAF4CA100B32A31 /* ResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AD67F2AAF4CA100B32A31 /* ResetView.swift */; };
 		042AD6A42AAF548D00B32A31 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AD6A22AAF548D00B32A31 /* InfoView.swift */; };
 		042AD6A52AAF548D00B32A31 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AD6A32AAF548D00B32A31 /* InfoViewController.swift */; };
+		045CC0F02AC4AC6400ED391C /* ApiExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC0EF2AC4AC6400ED391C /* ApiExtensions.swift */; };
+		045CC0F22AC4B1CF00ED391C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CC0F12AC4B1CF00ED391C /* CustomButton.swift */; };
 		048CEEA32AB1D8F50007D54E /* gothampro_mediumitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEE992AB1D8F50007D54E /* gothampro_mediumitalic.ttf */; };
 		048CEEA42AB1D8F50007D54E /* gothampro_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEE9A2AB1D8F50007D54E /* gothampro_medium.ttf */; };
 		048CEEA52AB1D8F50007D54E /* gothampro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEE9B2AB1D8F50007D54E /* gothampro.ttf */; };
@@ -36,7 +38,7 @@
 		048CEEAA2AB1D8F50007D54E /* gothampro_lightitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEEA02AB1D8F50007D54E /* gothampro_lightitalic.ttf */; };
 		048CEEAB2AB1D8F50007D54E /* gothampro_blackitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEEA12AB1D8F50007D54E /* gothampro_blackitalic.ttf */; };
 		048CEEAC2AB1D8F50007D54E /* gothampro_bolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048CEEA22AB1D8F50007D54E /* gothampro_bolditalic.ttf */; };
-		049377842AB748DC00DB8086 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049377832AB748DC00DB8086 /* UserService.swift */; };
+		049377842AB748DC00DB8086 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049377832AB748DC00DB8086 /* ApiService.swift */; };
 		049377872AB74A1400DB8086 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049377862AB74A1400DB8086 /* EmailView.swift */; };
 		049377892AB74A2200DB8086 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049377882AB74A2200DB8086 /* EmailViewController.swift */; };
 		0493778C2AB74AA200DB8086 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493778B2AB74AA200DB8086 /* PopUp.swift */; };
@@ -53,7 +55,7 @@
 		042AD6532AAF10C900B32A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		042AD6552AAF10C900B32A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042AD65F2AAF11EC00B32A31 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		042AD6622AAF453300B32A31 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		042AD6622AAF453300B32A31 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		042AD6652AAF45EA00B32A31 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		042AD6672AAF464D00B32A31 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		042AD6702AAF481B00B32A31 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,8 @@
 		042AD67F2AAF4CA100B32A31 /* ResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetView.swift; sourceTree = "<group>"; };
 		042AD6A22AAF548D00B32A31 /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		042AD6A32AAF548D00B32A31 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		045CC0EF2AC4AC6400ED391C /* ApiExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiExtensions.swift; sourceTree = "<group>"; };
+		045CC0F12AC4B1CF00ED391C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		048CEE992AB1D8F50007D54E /* gothampro_mediumitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_mediumitalic.ttf; sourceTree = "<group>"; };
 		048CEE9A2AB1D8F50007D54E /* gothampro_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_medium.ttf; sourceTree = "<group>"; };
 		048CEE9B2AB1D8F50007D54E /* gothampro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro.ttf; sourceTree = "<group>"; };
@@ -75,7 +79,7 @@
 		048CEEA02AB1D8F50007D54E /* gothampro_lightitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_lightitalic.ttf; sourceTree = "<group>"; };
 		048CEEA12AB1D8F50007D54E /* gothampro_blackitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_blackitalic.ttf; sourceTree = "<group>"; };
 		048CEEA22AB1D8F50007D54E /* gothampro_bolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothampro_bolditalic.ttf; sourceTree = "<group>"; };
-		049377832AB748DC00DB8086 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		049377832AB748DC00DB8086 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		049377862AB74A1400DB8086 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		049377882AB74A2200DB8086 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		0493778B2AB74AA200DB8086 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 		042AD6462AAF10C900B32A31 /* neobis_ios_auth */ = {
 			isa = PBXGroup;
 			children = (
+				045CC0EE2AC4ABCF00ED391C /* Helpers */,
 				049377822AB748B700DB8086 /* Service */,
 				042AD65E2AAF10FA00B32A31 /* Model */,
 				0493778D2AB74E5E00DB8086 /* View */,
@@ -139,7 +144,7 @@
 		042AD6612AAF450300B32A31 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				042AD6622AAF453300B32A31 /* UserViewModel.swift */,
+				042AD6622AAF453300B32A31 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				042AD6672AAF464D00B32A31 /* CustomTextField.swift */,
+				045CC0F12AC4B1CF00ED391C /* CustomButton.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -206,6 +212,14 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		045CC0EE2AC4ABCF00ED391C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				045CC0EF2AC4AC6400ED391C /* ApiExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		048CEE982AB1D8F50007D54E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,7 +241,7 @@
 		049377822AB748B700DB8086 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				049377832AB748DC00DB8086 /* UserService.swift */,
+				049377832AB748DC00DB8086 /* ApiService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -376,10 +390,12 @@
 				042AD6712AAF481B00B32A31 /* RegistrationViewController.swift in Sources */,
 				042AD6482AAF10C900B32A31 /* AppDelegate.swift in Sources */,
 				042AD6782AAF49DD00B32A31 /* SplashView.swift in Sources */,
-				049377842AB748DC00DB8086 /* UserService.swift in Sources */,
+				045CC0F02AC4AC6400ED391C /* ApiExtensions.swift in Sources */,
+				049377842AB748DC00DB8086 /* ApiService.swift in Sources */,
+				045CC0F22AC4B1CF00ED391C /* CustomButton.swift in Sources */,
 				042AD6602AAF11EC00B32A31 /* UserModel.swift in Sources */,
 				049377902AB74EE200DB8086 /* CreatePasswordView.swift in Sources */,
-				042AD6632AAF453300B32A31 /* UserViewModel.swift in Sources */,
+				042AD6632AAF453300B32A31 /* AuthViewModel.swift in Sources */,
 				049377922AB74F0600DB8086 /* CreatePasswordViewController.swift in Sources */,
 				042AD64A2AAF10C900B32A31 /* SceneDelegate.swift in Sources */,
 			);

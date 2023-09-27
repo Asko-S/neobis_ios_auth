@@ -9,9 +9,9 @@ import SnapKit
 
 class LoginViewController : UIViewController, LoginViewModelDelegate {
     let mainView = LoginScreenView()
-    var userViewModel: UserViewModelProtocol!
+    var userViewModel: AuthViewModelProtocol!
     
-    init(userViewModel: UserViewModelProtocol) {
+    init(userViewModel: AuthViewModelProtocol) {
         super.init(nibName: nil, bundle: nil)
         self.userViewModel = userViewModel
         self.userViewModel.loginDelegate = self
@@ -25,7 +25,7 @@ class LoginViewController : UIViewController, LoginViewModelDelegate {
         super.viewDidLoad()
         setupView()
         
-        let backButton = UIBarButtonItem(image: UIImage(named: "backButton")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(backPressed))
+        let backButton = UIBarButtonItem(image: UIImage(named: "backButton")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(goBackButtonPressed))
         self.navigationItem.leftBarButtonItem = backButton
         
         mainView.enterButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
@@ -42,12 +42,12 @@ class LoginViewController : UIViewController, LoginViewModelDelegate {
         userViewModel.loginUser(email: email, password: password)
     }
     
-    @objc func backPressed() {
+    @objc func goBackButtonPressed() {
         navigationController?.popViewController(animated: true)
     }
     
     @objc func resetPasswordPressed() {
-        let userViewModel = UserViewModel()
+        let userViewModel = AuthViewModel()
         let vc = EmailViewController(userViewModel: userViewModel)
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -59,7 +59,6 @@ class LoginViewController : UIViewController, LoginViewModelDelegate {
         }
     }
     
-    // LoginViewModelDelegate methods
     func didLogin(user: TokenObtainPair) {
         print("Successfully logged in as \(user)")
     }

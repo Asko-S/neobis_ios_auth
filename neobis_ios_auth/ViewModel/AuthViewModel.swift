@@ -1,9 +1,11 @@
-//  UserViewModel.swift
+//  AuthViewModel.swift
 //  neobis_ios_auth
 //  Created by Askar Soronbekov
 import Foundation
 import UIKit
 import SnapKit
+
+// MARK: - Protocols
 
 protocol RegistrationViewModelDelegate: AnyObject {
     func didRegister(user: EmailRegistration)
@@ -30,22 +32,24 @@ protocol RegisterConfirmViewModelDelegate: AnyObject {
     func didFail(with error: Error)
 }
 
-protocol UserViewModelProtocol: AnyObject {
+protocol AuthViewModelProtocol: AnyObject {
     var registrationDelegate: RegistrationViewModelDelegate? { get set }
     var loginDelegate: LoginViewModelDelegate? { get set }
     var forgotPasswordDelegate: ForgotPasswordViewModelDelegate? { get set }
     var confirmPasswordDelegate: ConfirmPasswordViewModelDelegate? { get set }
     var registerConfirmDelegate: RegisterConfirmViewModelDelegate? { get set }
     
-    func registerUser(email: String)
+    func registerEmail(email: String)
     func loginUser(email: String, password: String)
-    func forgotPassword(email: String)
-    func confirmForgotPassword(password: String, token: String, uidb64: String)
+    func resetPassword(email: String)
+    func completePasswordReset(password: String, token: String, uidb64: String)
     func registerConfirmUser(first_name: String, last_name: String, date_of_birth: String, email: String, password: String, password_confirm: String)
     
 }
 
-class UserViewModel: UserViewModelProtocol {
+// MARK: - UserViewModel Class
+
+class AuthViewModel: AuthViewModelProtocol {
     weak var registrationDelegate: RegistrationViewModelDelegate?
     weak var loginDelegate: LoginViewModelDelegate?
     weak var forgotPasswordDelegate: ForgotPasswordViewModelDelegate?
@@ -64,7 +68,9 @@ class UserViewModel: UserViewModelProtocol {
         self.forgotPasswordDelegate = forgotPasswordDelegate
     }
     
-    func registerUser(email: String) {
+    // MARK: - Registration email of user
+    
+    func registerEmail(email: String) {
         let parameters: [String: Any] = ["email": email]
         
         apiService.post(endpoint: "register-email", parameters: parameters) { [weak self] (result) in
@@ -88,6 +94,8 @@ class UserViewModel: UserViewModelProtocol {
             }
         }
     }
+    
+    // MARK: - Registration Confirmation, parsing other data of user
     
     func registerConfirmUser(first_name: String, last_name: String, date_of_birth: String, email: String, password: String, password_confirm: String) {
         let parameters: [String: Any] = ["first_name": first_name, "last_name": last_name, "date_of_birth": date_of_birth, "email": email, "password": password, "password_confirm": password_confirm]
@@ -117,6 +125,7 @@ class UserViewModel: UserViewModelProtocol {
         }
     }
     
+    // MARK: - Login
     func loginUser(email: String, password: String) {
         let parameters: [String: Any] = ["email": email, "password": password]
         
@@ -144,7 +153,9 @@ class UserViewModel: UserViewModelProtocol {
         }
     }
     
-    func forgotPassword(email: String) {
+    // MARK: - Forgot Password, email sending to reset password
+    
+    func resetPassword(email: String) {
         let parameters: [String: Any] = ["email": email]
 
         apiService.post(endpoint: "password-reset-email", parameters: parameters) { [weak self] (result) in
@@ -168,7 +179,10 @@ class UserViewModel: UserViewModelProtocol {
             }
         }
     }
-    func confirmForgotPassword(password: String, token: String, uidb64: String) {
+    
+    // MARK: - Complete Password Reset
+    
+    func completePasswordReset(password: String, token: String, uidb64: String) {
         let parameters: [String: Any] = ["password": password, "token": token, "uidb64": uidb64]
 
         apiService.patch(endpoint: "password-reset-complete", parameters: parameters) { [weak self] (result) in

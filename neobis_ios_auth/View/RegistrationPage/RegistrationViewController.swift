@@ -9,9 +9,9 @@ import SnapKit
 class RegistrationViewController : UIViewController, RegistrationViewModelDelegate {
 
     let mainView = RegistrationScreenView()
-    var userViewModel: UserViewModelProtocol!
+    var userViewModel: AuthViewModelProtocol!
 
-    init(userViewModel: UserViewModelProtocol) {
+    init(userViewModel: AuthViewModelProtocol) {
         super.init(nibName: nil, bundle: nil)
         self.userViewModel = userViewModel
         self.userViewModel.registrationDelegate = self
@@ -26,20 +26,20 @@ class RegistrationViewController : UIViewController, RegistrationViewModelDelega
         setupView()
         title = "Регистрация"
 
-        let backButton = UIBarButtonItem(image: UIImage(named: "backButton")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(backPressed))
+        let backButton = UIBarButtonItem(image: UIImage(named: "backButton")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(goBackButtonPressed))
         self.navigationItem.leftBarButtonItem = backButton
 
-        mainView.enterButton.addTarget(self, action: #selector(enterPressed), for: .touchUpInside)
+        mainView.enterButton.addTarget(self, action: #selector(enterButtonPressed), for: .touchUpInside)
     }
 
-    @objc func enterPressed() {
+    @objc func enterButtonPressed() {
         guard let email = mainView.loginField.text else {
             // Show error message to user
             print("Email is empty.")
             return
         }
 
-        userViewModel.registerUser(email: email)
+        userViewModel.registerEmail(email: email)
         
         if mainView.enterButton.currentTitleColor == .white{
             let vc = InfoViewController()
@@ -47,7 +47,7 @@ class RegistrationViewController : UIViewController, RegistrationViewModelDelega
         }
     }
 
-    @objc func backPressed() {
+    @objc func goBackButtonPressed() {
         navigationController?.popViewController(animated: true)
     }
 

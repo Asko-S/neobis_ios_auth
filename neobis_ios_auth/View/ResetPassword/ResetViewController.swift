@@ -9,9 +9,9 @@ import SnapKit
 class ResetViewController : UIViewController, ConfirmPasswordViewModelDelegate {
 
     let mainView = ResetView()
-    var userViewModel : UserViewModelProtocol!
+    var userViewModel : AuthViewModelProtocol!
 
-    init(userViewModel: UserViewModelProtocol) {
+    init(userViewModel: AuthViewModelProtocol) {
         super.init(nibName: nil, bundle: nil)
         self.userViewModel = userViewModel
         self.userViewModel.confirmPasswordDelegate = self
@@ -40,7 +40,7 @@ class ResetViewController : UIViewController, ConfirmPasswordViewModelDelegate {
                 print("Wrong auth code")
                 return
             }
-            userViewModel.confirmForgotPassword(password: passwordNew, token: codeToken, uidb64: uidb64Code)
+            userViewModel.completePasswordReset(password: passwordNew, token: codeToken, uidb64: uidb64Code)
         }
 
     }
