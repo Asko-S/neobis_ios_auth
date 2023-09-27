@@ -32,10 +32,10 @@ class ResetView : UIView, UITextFieldDelegate {
         return field
     }()
     
-    let repeatPassword: CustomTextField = {
+    let tokenCode: CustomTextField = {
         let field = CustomTextField()
         field.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 248/255, alpha: 1.0)
-        field.placeholder = "Повторите пароль"
+        field.placeholder = "Токен"
         field.isSecureTextEntry = true
         let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
         field.leftView = leftView
@@ -114,23 +114,13 @@ class ResetView : UIView, UITextFieldDelegate {
         return label
     }()
     
-    let fourthLabel : UILabel = {
-        let label = UILabel()
-        label.text = "•Совпадение пароля"
-        label.font = UIFont(name: "GothamPro-Medium", size: 16)
-        label.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
-        
-        return label
-    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         newPassword.delegate = self
-        repeatPassword.delegate = self
         
         newPassword.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
-        repeatPassword.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
     }
     
     required init?(coder: NSCoder) {
@@ -151,7 +141,7 @@ class ResetView : UIView, UITextFieldDelegate {
     
     @objc func toggleRepeatPasswordVisibility(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        repeatPassword.isSecureTextEntry = !repeatPassword.isSecureTextEntry
+        tokenCode.isSecureTextEntry = !tokenCode.isSecureTextEntry
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -160,12 +150,11 @@ class ResetView : UIView, UITextFieldDelegate {
     
     func setupView() {
         addSubview(newPassword)
-        addSubview(repeatPassword)
+        addSubview(tokenCode)
         addSubview(enterButton)
         addSubview(firstLabel)
         addSubview(secondLabel)
         addSubview(thirdLabel)
-        addSubview(fourthLabel)
         addSubview(authCode)
     }
     
@@ -178,7 +167,7 @@ class ResetView : UIView, UITextFieldDelegate {
             make.width.equalTo(UIScreen.main.bounds.width * 335 / 375)
         }
         
-        repeatPassword.snp.makeConstraints{ make in
+        tokenCode.snp.makeConstraints{ make in
             make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 212 / 812)
             make.centerX.equalToSuperview()
             make.height.equalTo(UIScreen.main.bounds.height * 60 / 812)
@@ -200,24 +189,20 @@ class ResetView : UIView, UITextFieldDelegate {
         }
         
         firstLabel.snp.makeConstraints{ make in
-            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 112 / 812)
-            make.leading.equalTo(repeatPassword.snp.leading)
+            make.top.equalTo(tokenCode.snp.bottom).offset(UIScreen.main.bounds.height * 112 / 812)
+            make.leading.equalTo(tokenCode.snp.leading)
         }
         
         secondLabel.snp.makeConstraints{ make in
-            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 139 / 812)
-            make.leading.equalTo(repeatPassword.snp.leading)
+            make.top.equalTo(tokenCode.snp.bottom).offset(UIScreen.main.bounds.height * 139 / 812)
+            make.leading.equalTo(tokenCode.snp.leading)
         }
         
         thirdLabel.snp.makeConstraints{ make in
-            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 166 / 812)
-            make.leading.equalTo(repeatPassword.snp.leading)
+            make.top.equalTo(tokenCode.snp.bottom).offset(UIScreen.main.bounds.height * 166 / 812)
+            make.leading.equalTo(tokenCode.snp.leading)
         }
         
-        fourthLabel.snp.makeConstraints{ make in
-            make.top.equalTo(repeatPassword.snp.bottom).offset(UIScreen.main.bounds.height * 193 / 812)
-            make.leading.equalTo(repeatPassword.snp.leading)
-        }
     }
     
     @objc func textFieldEditingChanged(_ textField: UITextField) {
@@ -245,17 +230,17 @@ class ResetView : UIView, UITextFieldDelegate {
             thirdLabel.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
         }
         
-        if newPassword.text == repeatPassword.text {
-            fourthLabel.textColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
-        } else {
-            fourthLabel.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
-        }
-        
+//        if newPassword.text == repeatPassword.text {
+//            fourthLabel.textColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
+//        } else {
+//            fourthLabel.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
+//        }
+//
         updateButtonColor()
     }
-    
+
     func updateButtonColor() {
-        if firstLabel.textColor == secondLabel.textColor && secondLabel.textColor == thirdLabel.textColor && thirdLabel.textColor == fourthLabel.textColor && fourthLabel.textColor ==  UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0) {
+        if firstLabel.textColor == secondLabel.textColor && secondLabel.textColor == thirdLabel.textColor {
             enterButton.backgroundColor = UIColor(red: 93/255, green: 95/255, blue: 249/255, alpha: 1.0)
             enterButton.setTitleColor(.white, for: .normal)
         } else {
