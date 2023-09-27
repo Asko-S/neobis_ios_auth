@@ -43,6 +43,7 @@ struct ProfileRegistration: Codable {
     let password_confirm: String
 }
 
+
 struct TokenRefresh: Codable {
     let refresh: String
     let access: String
